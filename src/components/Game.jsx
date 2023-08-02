@@ -8,9 +8,9 @@ const Game = () => {
 
     useEffect(() => {
         const fetchWord = async() => {
-            try {
+        try {
             const rng = Math.floor(Math.random() * 3) + 4
-            const response = await fetch(`https://random-word-api.herokuapp.com/word?lang=en&length=${rng}`)
+            const response = await fetch(`https://random-word-api.vercel.app/api?length=${rng}`)
             const word = await response.json()
             setCurrentWord(word[0])
             console.log(word[0], "length", word[0].length)
@@ -19,7 +19,7 @@ const Game = () => {
         } 
     }
     fetchWord()
-},[])
+}, [])
 
     return (
         <>

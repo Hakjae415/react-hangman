@@ -1,7 +1,8 @@
-const WordDisplay = () => {
+const WordDisplay = ({currentWord}) => {
     return (
         <>
-          <h1>WordDisplay</h1>
+          <h2>WordDisplay</h2>
+          <p>{currentWord}</p>
         </>
     )
 }

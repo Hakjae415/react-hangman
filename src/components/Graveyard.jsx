@@ -1,7 +1,7 @@
 const Graveyard = () => {
     return (
         <>
-          <h1>Graveyard</h1>
+          <h2>Graveyard</h2>
         </>
     )
 }

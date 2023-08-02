@@ -1,7 +1,7 @@
 const GuessForm = () => {
     return (
         <>
-          <h1>GuessForm</h1>
+          <h2>GuessForm</h2>
         </>
     )
 }

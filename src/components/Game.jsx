@@ -5,6 +5,7 @@ import GuessForm from "./GuessForm"
 
 const Game = () => {
     const [currentWord, setCurrentWord] = useState(null)
+    const [guesses, setGuesses] = useState("")
 
     useEffect(() => {
         const fetchWord = async() => {
@@ -25,7 +26,7 @@ const Game = () => {
         <>
           <h1>Game</h1>
           <WordDisplay currentWord={currentWord}/>
-          <GuessForm/>
+          <GuessForm guesses={guesses} setGuesses={setGuesses}/>
           <Graveyard/>
         </>
     )

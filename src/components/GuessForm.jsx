@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Button } from "@mui/material"
-const GuessForm = () => {
-    const [guesses, setGuesses] = useState("")
+const GuessForm = ({guesses, setGuesses}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -24,6 +23,8 @@ const GuessForm = () => {
                     pattern="[A-Za-z]{1}"
                     maxLength={1}
                     size={6}
+                    title="Input must be a letter"
+                    required
                  />
             </label>
             <Button type="submit" variant="contained" color="success">Guess</Button>

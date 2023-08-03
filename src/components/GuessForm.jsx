@@ -1,25 +1,18 @@
 import { useState } from "react"
 import { Button } from "@mui/material"
-const GuessForm = ({guesses, setGuesses}) => {
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        alert(`You guessed ${guesses}`)
-        console.log(guesses)
-        setGuesses("")
-    }
+const GuessForm = ({guesses, setGuesses, formSubmitHandler}) => {
 
     return (
         <>
           <h2>Guess-Form</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={formSubmitHandler}>
             <label>
                 Guess Here
                 <input
                     type="text"
                     placeholder="Enter Letter"
                     value={guesses}
-                    onChange={(e) => setGuesses(e.target.value)}
+                    onChange={(e) => setGuesses(e.target.value.toUpperCase())}
                     pattern="[A-Za-z]{1}"
                     maxLength={1}
                     size={6}
